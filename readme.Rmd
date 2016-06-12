@@ -14,7 +14,21 @@ knitr::opts_chunk$set(
 
 # About
 
-This repo contains R code for generating the ACA premium caps. Source: [Explaining Health Care Reform: Questions About Health Insurance Subsidies](http://kff.org/health-reform/issue-brief/explaining-health-care-reform-questions-about-health/)
+This repo contains R code for generating the ACA premium caps. 
+
+- Source: [26 U.S. Code § 36B - Refundable credit for coverage under a qualified health plan](https://www.law.cornell.edu/uscode/text/26/36B)
+- Source: [KFF: Explaining Health Care Reform: Questions About Health Insurance Subsidies](http://kff.org/health-reform/issue-brief/explaining-health-care-reform-questions-about-health/)
+
+# Havest the Applicable Percentages
+
+```{r}
+library(dplyr, warn.conflicts = FALSE)
+
+xml2::read_html("https://www.law.cornell.edu/uscode/text/26/36B") %>% 
+  rvest::html_table() %>% 
+  .[[1]] %>% 
+  pander::pander(split.cells = 25, caption = "Applicable Premium Percentage for Qualified Health Insurance Plans in the Exchange")
+```
 
 # Data
 
