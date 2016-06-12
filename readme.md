@@ -1,8 +1,9 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 About
 =====
 
-This repo contains R code for generating the ACA premium cap. Source: [Explaining Health Care Reform: Questions About Health Insurance Subsidies](http://kff.org/health-reform/issue-brief/explaining-health-care-reform-questions-about-health/)
+This repo contains R code for generating the ACA premium caps. Source: [Explaining Health Care Reform: Questions About Health Insurance Subsidies](http://kff.org/health-reform/issue-brief/explaining-health-care-reform-questions-about-health/)
 
 Data
 ====
